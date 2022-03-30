@@ -16,6 +16,8 @@ add_library(${PROJECT_NAME}
     include/serial/v8stdint.h
 )
 
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+
 if(APPLE) # macOS
     find_library(IOKIT_LIBRARY IOKit)
     find_library(FOUNDATION_LIBRARY Foundation)
